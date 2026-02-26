@@ -1,0 +1,34 @@
+.t396__elem[class*="card-flip-wrapper-main-"] {
+    cursor: pointer !important;
+}
+
+[class^="card-flip-wrapper-face-"], [class^="card-flip-wrapper-back-"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 1.2s cubic-bezier(.34,1.56,.64,1);
+}
+
+.t396__elem[class*="card-flip-content-face-"],
+.t396__elem[class*="card-flip-content-back-"] {
+    zoom: 0 !important;
+}
+
+[class^="card-flip-wrapper-back-"] {
+    transform: perspective(1500px) rotateX(-180deg);
+}
+
+[class^="card-flip-wrapper-face-"] {
+    transform: perspective(1500px) rotateX(0deg);
+}
+
+[class*="card-flip-wrapper-main-active-"] [class^="card-flip-wrapper-face-"] {
+    transform: perspective(1500px) rotateX(180deg);
+}
+
+[class*="card-flip-wrapper-main-active-"] [class^="card-flip-wrapper-back-"] {
+    transform: perspective(1500px) rotateY(0deg);
+}
